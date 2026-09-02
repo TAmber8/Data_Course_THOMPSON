@@ -1,1 +1,1 @@
-# Data_Course_THOMPSON
+# Data_Course_THOMPSONThis README file contains information about my uploaded assignments
