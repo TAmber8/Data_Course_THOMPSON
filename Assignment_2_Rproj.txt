@@ -1,0 +1,17 @@
+csv_files <- list.files(path = "Data/", pattern = "\\.csv$") #This sets up a path to the directory to look for files ending with .csv
+csv_files  #Due to the previous command, this command should make it list all .csv files in the Data directory
+length(csv_files) #This will show the number of files that are being listed in csv_files
+df <- read.csv("Data/wingspan_vs_mass.csv") #This will read the information in the file wingspan_vs_mass.csv when the object "df" is used
+df
+head(df, 5) #This line is to show the first five lines of data in the object df
+b_files <- list.files(path = "Data/", pattern = "^b", recursive = TRUE, full.names = TRUE) #This 
+b_files
+for (file in b_files) {
+  first_line <- readLines(file, n = 1)
+  print(first_line)
+} #This lists the first line in all folders start with "b"
+csv_files_full <- list.files(path = "Data/", pattern = "\\.csv$", recursive = TRUE, full.names = TRUE) #This assigns csv_files_full as the object for the command to find all files in the Data directory with .csv
+for (file in csv_files_full) {
+  first_line <- readLines(file, n = 1)
+  print(first_line)
+} #This lists the first line of all .csv files
